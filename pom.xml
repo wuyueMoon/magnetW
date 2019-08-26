@@ -33,13 +33,13 @@
             <artifactId>javax.servlet-api</artifactId>
             <version>4.0.1</version>
         </dependency>
-
-        <!--jstl-->
         <dependency>
-            <groupId>javax.servlet.jsp.jstl</groupId>
-            <artifactId>jstl-api</artifactId>
+            <groupId>org.glassfish.web</groupId>
+            <artifactId>jstl</artifactId>
             <version>1.2</version>
         </dependency>
+
+        <!--jstl-->
         <dependency>
             <groupId>log4j</groupId>
             <artifactId>log4j</artifactId>
@@ -47,16 +47,16 @@
         </dependency>
 
         <!-- jsp -->
-        <dependency>
-            <groupId>javax.el</groupId>
-            <artifactId>javax.el-api</artifactId>
-            <version>3.0.0</version>
-        </dependency>
-        <dependency>
-            <groupId>taglibs</groupId>
-            <artifactId>standard</artifactId>
-            <version>1.1.2</version>
-        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>javax.el</groupId>-->
+            <!--<artifactId>javax.el-api</artifactId>-->
+            <!--<version>3.0.0</version>-->
+        <!--</dependency>-->
+        <!--<dependency>-->
+            <!--<groupId>taglibs</groupId>-->
+            <!--<artifactId>standard</artifactId>-->
+            <!--<version>1.1.2</version>-->
+        <!--</dependency>-->
 
 
         <!--spring-->
@@ -80,22 +80,11 @@
         </dependency>
     </dependencies>
     <build>
-        <finalName>magnetw</finalName>
         <plugins>
             <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <configuration>
-                    <source>1.6</source>
-                    <target>1.6</target>
-                </configuration>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
         </plugins>
-        <resources>
-            <resource>
-                <directory>src/main/resources</directory>
-                <filtering>true</filtering>
-            </resource>
-        </resources>
     </build>
 </project>
