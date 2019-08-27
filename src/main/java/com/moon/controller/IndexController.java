@@ -58,8 +58,8 @@ public class IndexController {
         model.addAttribute("sort_by", gson.toJson(ruleService.getSupportedSorts(rule.getPaths())));
         model.addAttribute("source_sites", gson.toJson(ruleService.getSites()));
 
-       // return isMobile ? "mobile" : "index";
-        return "index";
+        return isMobile ? "mobile" : "index";
+        //return "index";
     }
 
 
